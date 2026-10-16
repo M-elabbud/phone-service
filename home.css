@@ -1,0 +1,870 @@
+:root {
+  --primary-color: #123b65;
+  --primary-dark: #0b2948;
+  --secondary-color: #1685d1;
+  --accent-color: #eaf5ff;
+  --background-color: #ffffff;
+  --section-background: #f5f8fc;
+  --text-color: #202b38;
+  --muted-color: #667587;
+  --border-color: #e0e7ef;
+  --shadow-small: 0 4px 15px rgba(18, 59, 101, 0.07);
+  --shadow-medium: 0 12px 35px rgba(18, 59, 101, 0.12);
+  --border-radius: 14px;
+  --container-width: 1180px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary-dark);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+p {
+  color: var(--muted-color);
+}
+
+section {
+  padding: 85px 24px;
+}
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 4px;
+}
+
+/* TOP BAR */
+
+.upp_linje_info {
+  background: var(--primary-dark);
+  color: white;
+  padding: 10px 24px;
+  font-size: 0.88rem;
+}
+
+.info-inner {
+  max-width: var(--container-width);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.upp_linje_info p {
+  color: white;
+}
+
+.snabblankar {
+  display: flex;
+  gap: 24px;
+}
+
+.snabblankar a {
+  color: white;
+}
+
+.snabblankar a:hover {
+  color: #8bd0ff;
+}
+
+/* HEADER */
+
+.site-header {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.025);
+}
+
+.header-inner {
+  max-width: var(--container-width);
+  min-height: 90px;
+  margin: auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 190px;
+  max-height: 66px;
+  object-fit: contain;
+}
+
+.hamburger-meny ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.hamburger-meny a {
+  display: inline-block;
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--text-color);
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.hamburger-meny a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: width 0.25s ease;
+}
+
+.hamburger-meny a:hover {
+  color: var(--secondary-color);
+}
+
+.hamburger-meny a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+
+.valkommen-text-och-knappar {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(22, 133, 209, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #f5f9ff, #eaf4ff 55%, #ffffff);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: auto;
+}
+
+.overrubrik {
+  color: var(--secondary-color);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero-content h1 {
+  max-width: 780px;
+  margin-bottom: 24px;
+  letter-spacing: -1.4px;
+}
+
+.hero-text {
+  max-width: 650px;
+  font-size: 1.12rem;
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+.hero-knappar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* BUTTONS */
+
+.knapp {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 52px;
+  padding: 13px 27px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.96rem;
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.knapp:hover {
+  transform: translateY(-2px);
+}
+
+.knapp-primary {
+  color: white;
+  background: var(--primary-color);
+  box-shadow: var(--shadow-small);
+}
+
+.knapp-primary:hover {
+  background: var(--secondary-color);
+  box-shadow: var(--shadow-medium);
+}
+
+.knapp-secondary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background: transparent;
+}
+
+.knapp-secondary:hover {
+  color: white;
+  background: var(--primary-color);
+}
+
+/* SERVICE INFORMATION */
+
+.container-for-info-om-oppettider-service {
+  background: white;
+  text-align: center;
+}
+
+.container-for-info-om-oppettider-service > h2 {
+  max-width: 750px;
+  margin: 0 auto 45px;
+}
+
+.info-kort-container {
+  max-width: var(--container-width);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.info-kort {
+  padding: 32px 25px;
+  background: var(--section-background);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transition: 0.25s ease;
+}
+
+.info-kort:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.info-kort h3 {
+  margin-bottom: 14px;
+}
+
+.info-kort p {
+  font-size: 0.96rem;
+}
+/* ICONS */
+
+.icons {
+  width: 25px;
+  height: 25px;
+}
+
+/* Map Container */
+.map {
+  width: 100%;
+  max-width: 1180px;
+  height: 450px;
+  margin: 40px auto;
+  border-radius: 16px;
+  background-color: #f5f8fc;
+  border: 1px solid #e0e7ef;
+  box-shadow: 0 8px 25px rgba(18, 59, 101, 0.12);
+}
+
+/* Map iframe */
+.map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+  border-radius: 16px;
+}
+/* SERVICES */
+
+.tjanster-section {
+  background: var(--section-background);
+}
+
+.section-heading {
+  max-width: 760px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin-bottom: 18px;
+}
+
+.tjanster-container {
+  max-width: var(--container-width);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.tjanst-kort {
+  padding: 35px 28px;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-small);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 0.25s ease;
+}
+
+.tjanst-kort:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-medium);
+}
+
+.tjanst-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: var(--accent-color);
+  border-radius: 14px;
+  margin-bottom: 24px;
+}
+
+.tjanst-kort h3 {
+  margin-bottom: 14px;
+}
+
+.tjanst-kort p {
+  margin-bottom: 22px;
+}
+
+.tjanst-kort a {
+  margin-top: auto;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.tjanst-kort a:hover {
+  text-decoration: underline;
+}
+
+/* BUY AND SELL */
+
+.kop-salj-section {
+  background: linear-gradient(
+    110deg,
+    rgba(11, 41, 72, 0.97),
+    rgba(18, 59, 101, 0.92)
+  );
+  color: white;
+}
+
+.kop-salj-content {
+  max-width: var(--container-width);
+  margin: auto;
+}
+
+.kop-salj-text {
+  max-width: 720px;
+}
+
+.kop-salj-text .overrubrik {
+  color: #8bd0ff;
+}
+
+.kop-salj-text h2 {
+  color: white;
+  margin-bottom: 24px;
+}
+
+.kop-salj-text p:not(.overrubrik) {
+  color: #e0eaf4;
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+}
+
+.kop-salj-text .knapp-primary {
+  background: white;
+  color: var(--primary-dark);
+}
+
+.kop-salj-text .knapp-primary:hover {
+  background: #dceeff;
+}
+
+/* OPENING HOURS */
+
+.oppettider-section {
+  background: white;
+}
+
+.oppettider-inner {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 45px;
+}
+
+.oppettider-inner h2,
+.oppettider-inner h3 {
+  margin-bottom: 18px;
+}
+
+.oppettider-inner p {
+  margin-bottom: 15px;
+}
+
+.oppettider-inner a {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.oppettider-inner a:hover {
+  text-decoration: underline;
+}
+
+/* PRICES */
+
+.priser-for-vanligt-service {
+  background: var(--section-background);
+}
+
+.priser-container {
+  max-width: var(--container-width);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.pris-kort {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 32px 26px;
+  box-shadow: var(--shadow-small);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 0.25s ease;
+}
+
+.pris-kort:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.pris-kort h3 {
+  margin-bottom: 16px;
+}
+
+.pris-kort p {
+  margin-bottom: 22px;
+}
+
+.pris-kort a {
+  margin-top: auto;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.pris-kort a:hover {
+  text-decoration: underline;
+}
+
+.pris-notering {
+  max-width: var(--container-width);
+  margin: 30px auto 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* CONTACT */
+
+.kontakt-section {
+  background: white;
+}
+
+.kontakt-inner {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 65px;
+  align-items: start;
+}
+
+.kontakt-text h2 {
+  margin-bottom: 22px;
+}
+
+.kontakt-information {
+  padding: 32px;
+  background: var(--section-background);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.kontakt-information h3 {
+  margin-bottom: 24px;
+}
+
+.kontakt-information p {
+  margin-bottom: 20px;
+}
+
+.kontakt-information p:last-child {
+  margin-bottom: 0;
+}
+
+.kontakt-information strong {
+  color: var(--primary-dark);
+}
+
+/* FOOTER */
+
+.footer {
+  background: var(--primary-dark);
+  color: white;
+  padding: 65px 24px 0;
+}
+
+.footer-inner {
+  max-width: var(--container-width);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 50px;
+  padding-bottom: 45px;
+}
+
+.footer-brand img {
+  width: 180px;
+  max-height: 75px;
+  object-fit: contain;
+  margin-bottom: 22px;
+}
+
+.footer-brand p,
+.footer-contact p {
+  color: #d2deeb;
+}
+
+.footer-links h2,
+.footer-contact h2 {
+  font-size: 1.15rem;
+  color: white;
+  margin-bottom: 22px;
+}
+
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: #d2deeb;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: #8bd0ff;
+}
+
+.footer-contact p {
+  margin-bottom: 12px;
+}
+
+.footer-contact a {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.footer-bottom {
+  max-width: var(--container-width);
+  margin: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 22px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #d2deeb;
+  font-size: 0.88rem;
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+  .header-inner {
+    gap: 20px;
+  }
+
+  .logo img {
+    width: 155px;
+  }
+
+  .hamburger-meny ul {
+    gap: 18px;
+  }
+
+  .hamburger-meny a {
+    font-size: 0.9rem;
+  }
+
+  .valkommen-text-och-knappar {
+    min-height: 480px;
+  }
+
+  .info-kort-container,
+  .tjanster-container,
+  .priser-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .oppettider-inner {
+    gap: 30px;
+  }
+
+  .kontakt-inner {
+    gap: 35px;
+  }
+
+  .footer-inner {
+    gap: 30px;
+  }
+  .map {
+    height: 350px;
+    margin: 30px auto;
+    padding: 0 15px;
+    border-radius: 12px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  html {
+    scroll-padding-top: 20px;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  .upp_linje_info {
+    padding: 10px 16px;
+    font-size: 0.78rem;
+  }
+
+  .info-inner {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+
+  .snabblankar {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .header-inner {
+    min-height: auto;
+    padding: 18px 20px;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .logo img {
+    width: 160px;
+    max-height: 60px;
+  }
+
+  .hamburger-meny {
+    width: 100%;
+  }
+
+  .hamburger-meny ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px 18px;
+  }
+
+  .hamburger-meny a {
+    padding: 5px 0;
+    font-size: 0.86rem;
+  }
+
+  .valkommen-text-och-knappar {
+    min-height: auto;
+    padding: 75px 20px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+    letter-spacing: -0.7px;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .hero-knappar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .knapp {
+    width: 100%;
+  }
+
+  .info-kort-container,
+  .tjanster-container,
+  .priser-container,
+  .oppettider-inner,
+  .kontakt-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .info-kort-container,
+  .tjanster-container,
+  .priser-container {
+    gap: 18px;
+  }
+
+  .info-kort,
+  .tjanst-kort,
+  .pris-kort {
+    padding: 27px 23px;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .kop-salj-text h2 {
+    font-size: 2rem;
+  }
+
+  .oppettider-inner,
+  .kontakt-inner {
+    gap: 30px;
+  }
+
+  .kontakt-information {
+    padding: 25px 22px;
+  }
+
+  .footer {
+    padding: 48px 20px 0;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-bottom: 35px;
+  }
+
+  .footer-bottom {
+    padding: 20px 0;
+  }
+
+  .map {
+    height: 280px;
+    margin: 20px auto;
+    padding: 0 10px;
+    border-radius: 10px;
+  }
+
+  .map iframe {
+    border-radius: 10px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
